@@ -14,8 +14,8 @@ RUN echo ". $HOME/.asdf/asdf.sh" >> $HOME/.bashrc.d/asdf.sh
 RUN echo ". $HOME/.asdf/completions/asdf.bash" >> $HOME/.bashrc.d/asdf.sh
 
 ENV BUMP_TO_FORCE_GITPOD_UPDATE=1
-COPY .tool-versions $HOME/
-COPY install-asdf-plugins.sh $HOME/
+COPY gitpod/.tool-versions $HOME/
+COPY gitpod/install-asdf-plugins.sh $HOME/
 RUN ./install-asdf-plugins.sh
 RUN bash -c ". $HOME/.bashrc.d/asdf.sh && asdf install"
 
