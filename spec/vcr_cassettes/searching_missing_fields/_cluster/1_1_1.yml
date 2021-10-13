@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9200/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Elastic-Client-Meta:
+      - es=7.15.0,rb=2.7.4,t=7.15.0,fd=1.8.0,nh=0.1.10
+      User-Agent:
+      - 'elasticsearch-ruby/7.15.0 (RUBY_VERSION: 2.7.4; linux x86_64; Faraday v1.8.0)'
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Elastic-Product:
+      - Elasticsearch
+      Warning:
+      - 299 Elasticsearch-7.15.0-79d65f6e357953a5b3cbcc5e2c7c21073d89aa29 "Elasticsearch
+        built-in security features are not enabled. Without authentication, your cluster
+        could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.15/security-minimal-setup.html
+        to enable security."
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '316'
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "name" : "master-1",
+          "cluster_name" : "c1",
+          "cluster_uuid" : "Tro08u1jTey31xuNvuxMYw",
+          "version" : {
+            "number" : "7.15.0",
+            "build_flavor" : "default",
+            "build_type" : "tar",
+            "build_hash" : "79d65f6e357953a5b3cbcc5e2c7c21073d89aa29",
+            "build_date" : "2021-09-16T03:05:29.143308416Z",
+            "build_snapshot" : false,
+            "lucene_version" : "8.9.0",
+            "minimum_wire_compatibility_version" : "6.8.0",
+            "minimum_index_compatibility_version" : "6.0.0-beta1"
+          },
+          "tagline" : "You Know, for Search"
+        }
+  recorded_at: Wed, 13 Oct 2021 08:59:54 GMT
+- request:
+    method: get
+    uri: http://localhost:9200/_cluster/health
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Elastic-Client-Meta:
+      - es=7.15.0,rb=2.7.4,t=7.15.0,fd=1.8.0,nh=0.1.10
+      User-Agent:
+      - 'elasticsearch-ruby/7.15.0 (RUBY_VERSION: 2.7.4; linux x86_64; Faraday v1.8.0)'
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Elastic-Product:
+      - Elasticsearch
+      Warning:
+      - 299 Elasticsearch-7.15.0-79d65f6e357953a5b3cbcc5e2c7c21073d89aa29 "Elasticsearch
+        built-in security features are not enabled. Without authentication, your cluster
+        could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.15/security-minimal-setup.html
+        to enable security."
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '227'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"cluster_name":"c1","status":"yellow","timed_out":false,"number_of_nodes":2,"number_of_data_nodes":1,"active_primary_shards":2,"active_shards":2,"relocating_shards":0,"initializing_shards":0,"unassigned_shards":1,"delayed_unassigned_shards":0,"number_of_pending_tasks":0,"number_of_in_flight_fetch":0,"task_max_waiting_in_queue_millis":0,"active_shards_percent_as_number":66.66666666666666}'
+  recorded_at: Wed, 13 Oct 2021 08:59:54 GMT
+recorded_with: VCR 6.0.0

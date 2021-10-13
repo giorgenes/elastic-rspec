@@ -1,18 +1,7 @@
 require 'spec_helper'
 
-describe 'searching missing fields' do
+describe 'searching missing fields', :vcr do
 	subject(:client) { Elasticsearch::Client.new log: ENV['ELASTIC_LOG']==1 }
-
-  RSpec::Matchers.define :find_object do |expected|
-    match do |actual|
-      hits = actual["hits"]
-
-
-      if hits['hits'].size > 0
-        hits['hits'].find { |hit| hit['_id'].to_s == expected.to_s } != nil
-      end
-    end
-  end
 
 	describe '#cluster' do
 		subject { client.cluster.health }
