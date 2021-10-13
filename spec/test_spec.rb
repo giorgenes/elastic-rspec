@@ -1,7 +1,7 @@
-require 'rspec'
+require 'spec_helper'
 
 describe 'searching missing fields' do
-	subject(:client) { Elasticsearch::Client.new url: 'http://localhost:19200', log: true }
+	subject(:client) { Elasticsearch::Client.new log: ENV['ELASTIC_LOG']==1 }
 
   RSpec::Matchers.define :find_object do |expected|
     match do |actual|
@@ -52,6 +52,7 @@ describe 'searching missing fields' do
 			before do
         client.index(
             index: index_name,
+            refresh: 'wait_for',
             id: 1,
             body: {
               name: 'Giorgenes Gelatti'
