@@ -5,4 +5,7 @@ image:
 tasks:
   - init: |
       export EDITOR="command gp open -w" VISUAL="command gp open -w"
-    command: exec zsh
+      bundle
+    command: |
+      ./start.sh
+      exec zsh
