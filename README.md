@@ -10,3 +10,16 @@ ES_PATH_CONF=master-1/config elasticsearch -d
 ES_PATH_CONF=node-1/config elasticsearch -d
 ```
 
+## Running the specs
+
+```
+bundle exec rspec
+```
+
+To enable elastic logs during specs:
+
+```
+ELASTIC_LOG=1 bundle exec rspec
+```
+
+
