@@ -1,17 +1,7 @@
 require 'spec_helper'
 
-describe 'searching missing fields', :vcr do
+describe 'search API', :vcr do
 	subject(:client) { Elasticsearch::Client.new log: ENV['ELASTIC_LOG']==1 }
-
-	describe '#cluster' do
-		subject { client.cluster.health }
-
-		it { is_expected.to include('cluster_name' => 'c1') }
-	end
-
-  describe '#get' do
-    
-  end
 
 	describe '#search' do
 		let(:index_name) { 'test_index' }

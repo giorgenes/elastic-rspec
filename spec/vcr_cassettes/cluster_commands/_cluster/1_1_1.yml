@@ -53,7 +53,7 @@ http_interactions:
           },
           "tagline" : "You Know, for Search"
         }
-  recorded_at: Wed, 13 Oct 2021 08:59:54 GMT
+  recorded_at: Wed, 13 Oct 2021 09:10:33 GMT
 - request:
     method: get
     uri: http://localhost:9200/_cluster/health
@@ -90,5 +90,5 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"cluster_name":"c1","status":"yellow","timed_out":false,"number_of_nodes":2,"number_of_data_nodes":1,"active_primary_shards":2,"active_shards":2,"relocating_shards":0,"initializing_shards":0,"unassigned_shards":1,"delayed_unassigned_shards":0,"number_of_pending_tasks":0,"number_of_in_flight_fetch":0,"task_max_waiting_in_queue_millis":0,"active_shards_percent_as_number":66.66666666666666}'
-  recorded_at: Wed, 13 Oct 2021 08:59:54 GMT
+  recorded_at: Wed, 13 Oct 2021 09:10:33 GMT
 recorded_with: VCR 6.0.0
