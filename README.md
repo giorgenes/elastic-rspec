@@ -2,5 +2,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)
 
 
-# elastic-search-rspec-reference
+# About
 A set of rspec tests to demonstrate use cases for elastic search
+
+```bash
+ES_PATH_CONF=master-1/config elasticsearch -d
+ES_PATH_CONF=node-1/config elasticsearch -d
+```
+
